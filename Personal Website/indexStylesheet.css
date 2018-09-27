@@ -1,0 +1,29 @@
+h1 {
+	color: gray;
+	border-bottom: solid 5px black;
+	font-family: Arial;
+	margin-bottom: 30px;
+}
+
+img {
+	width: 300px;
+	height: 380px;
+}
+
+.picLink{
+	color:red;
+}
+
+#major{
+	font-size:20px;
+}
+
+
+
+#jump {
+	float: left;
+}
+
+p {
+	display: inline;
+}

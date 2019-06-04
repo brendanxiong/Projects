@@ -1,0 +1,27 @@
+/* making mobile compatible- don't forget to link to html, if screen width is 800px or less apply this css code*/
+@media screen and (max-width: 800px)
+{
+    /*working on intro first*/
+    #intro{
+        flex-direction: column;
+        font-size: 30px;
+    }
+
+    #profPic{
+        width: 85vw;   /*shrink when compacted(?) vw is view width, % is percentage*/
+    }
+
+    #ftdn{
+        width: 90%; /*if  not here is doesn't get bigger*/
+        height: 400px;  /*make landscape photos change and fit everyone*/
+    }
+
+    /*how to fit a big navigation bar - make it vertical*/
+
+    /*rellax library- like apple  one; also use fignma to design*/
+
+
+
+
+    /*5/20 - bootstrap: get introductory CSS out of the way - add code to a theme etc*/
+}

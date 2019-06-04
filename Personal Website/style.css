@@ -1,0 +1,199 @@
+#title{
+    font-size: 50px;        /*figure out header and animation*/
+    font-weight: bold;
+    margin-top: 50px; /*to prevent overlap*/
+
+
+}
+
+
+
+
+/*unordered list style
+*/
+ul{
+list-style-type: none;
+display: flex;
+background-color: white;
+position: fixed; /*position fixed moves it somewhere else(?) it leaves the box there */
+top: 0;
+width: 100%; 
+
+}
+
+li a{
+
+    padding: 20px;
+    text-decoration:none;
+    flex-direction: row;/*active is when holding on it*/
+    color: white;
+    
+}
+
+/*ul is entire box, list elements are own little boxes*/
+
+li a:hover{
+    background-color: rgb(86, 101, 134);
+}
+
+
+.active{
+background-color:rgb(86, 101, 134);
+
+}
+
+
+/*make education have a section and do flex box to prevent overlap*/
+/*EDUCATION SECTION*/
+#education{
+    flex-direction: column;
+    margin-top: 50px;
+
+}
+
+#eduTitle{
+    font-size: 50px;
+    margin: 0px;    /*since h1 automatically has margins*/
+
+}
+
+
+body{
+    font-family: 'Arimo', sans-serif;
+    background-color: lightgray;
+    /*#000000 then mouse over it to pick color (or pick another color)*/
+}
+
+#intro{
+    display: flex; /* use flex box*/
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 50px;
+   
+}
+
+#intro p {
+     /*animations (calls p section in intro)*/
+     animation-name: move-left;
+     animation-duration: 2s;
+     /*white-space: nowrap; position instead of margin moves box not wraps text*/
+     position: relative; /*relative uses og position as a reference, static doesn't move; absolute is relative
+     to closest position ancestor (not statically positioned; fixed from point in the page??)*/
+    
+}
+
+@keyframes move-left{       /*psuedo-selector*/
+    0%{
+        left: 250px;
+    }    /*inital*/
+
+    100%{
+        left: 0px;
+    }
+    
+}
+
+
+#profPic {
+    height: 500px;
+    width: 400px;
+    object-fit: cover; /* to help with the aspect ratio*/
+    /*transform: rotate(90deg);*/
+    padding: 40px; /*adds space around it*/
+    
+}
+
+#aboutMe/*big section*/
+{
+    display: flex;
+    flex-direction: column; 
+    /* need this to cetner image */
+    font-size: 30px;
+    /*justify-content: center;*/
+
+
+}
+
+#ftdn{
+    height: 400px;
+    width: 500px;
+    object-fit: cover;
+  /*padding: 30px 30px 0px 30px;*/
+    align-self: center; /*to center image*/
+}
+
+ footer {        /*not necessarily need id since footer not tag already used */
+        font-size: 15px;
+        padding: 15px 5px;
+}
+
+
+/* should only have one intro etc */
+
+/* classes- use . instead of #
+id only has one section/one image
+class has entire location (see code usage) 
+can have non unique names for classes- 
+all things with the class name have its property*/
+
+.highlight
+{
+    color: blue;
+}
+
+
+/*pseudo classes*/
+
+a:link{
+    color: yellow;
+
+}
+
+a:visited{          /*can apply pseudo class selector to any class*/
+    color:black;
+}
+
+a:hover, a:active{
+    color: green;
+}
+
+
+/*my-p-tag:hover a{ } - if you hover over p tag, style a tag like this*/
+
+/*animation - inital then final styling- css makes it blend together*/
+
+
+/*dark mode /non dark css "p" means any paragarph tag in dark mode section*/
+#dark-mode-section {   
+  /*  width: 500px;
+    height: 500px;*/
+    color:cornsilk;
+}
+
+#dark-mode-section p {   
+    color: black;
+}
+
+#dark-mode-section.dark-mode{       /*dark-mode-section .dark-mode is like child no space continues to refer to same element*/
+    /*selects this during dark mode (class) only*/
+    background-color: #222;
+}
+
+
+
+#dark-mode-section.dark-mode p{
+    color: white;
+}
+
+
+#dark-mode-section.dark-mode div{
+    opacity: 0;
+}
+
+
+#dark-mode-section.dark-mode div {
+
+    background-color: red;
+}
+
+/*media types and tranformative desing- ex: mobile vs web design*/

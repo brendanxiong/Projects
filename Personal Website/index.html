@@ -1,82 +1,77 @@
 <!DOCTYPE html>
-
 <html>
+    <head>
+        <title>Brendan Xiong</title>
+       
+        <link rel = "stylesheet" href = "style.css">
+        <link rel = "stylesheet" media= "screen and (max-width: 800px)" href = "max800.css">
+        <!--apply when at 800px width or less-->
+        <script type = "text/javascript" src = "index.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+        <!--should also embed font so load everything first-->
+    </head>
 
-	<head>
+   
 
-			<title>Hi!</title>
+    <body>
 
-			<link rel="stylesheet" type="text/css" href="indexStylesheet.css"/>
+    <!--education list etc-->
 
-	</head>
+    <ul>
+        <li><a class = "active" href= "./index.html">Brendan Xiong</a></li>
+        <li><a  href = "./education.html">Education</a></li> 
+        <!--keeps active if on page jk keeps open/active page colored-->
+    </ul>
 
-	<body>
+    <section id = "title"><!--do section instead of h id(?)-->
+    Brendan Xiong
+        </section>
+    <hr>
 
-			<div>
+    <section id = "intro" class = "dark">  <!--section just used to section off things-->
+<!--create image --> <img id = "profPic" src = "Images/B_XIONG 5.jpg" 
+                    alt = "Foundations Winter \'19 Showcase">
+                
+         <p>        <!--another div can prevent overlap-->
+            My name is Brendan Xiong and I am a Linguistics and Computer Science major at UCLA
+        </p>
+    </section>
 
-					<h1>Brendan Xiong</h1>
+    <hr>    <!--line break hr is line break??-->
 
-					<p id = "major">Linguistics and Computer Science Major</p> 
-
-					<br />
-
-					<p>Nice to meet you!</p>
-
-					<br />
-
-					<br />
-
-					<p>Hobbies:</p>
-
-					<ul>
-						<li>Reading</li>
-						<li>Running</li>
-						<li>Traveling</li>
-					</ul>
-
-					<a href="https://travel.usnews.com/rankings/worlds-best-vacations/">US News: World's Best Places to Visit</a>
-
-			</div>
-
-			<div class = "picLink">
-
-				<br />
+   
 
 
+    <section id = "aboutMe">
+        <h2>Inspiration</h2>
+        <p>In 2016 I joined AP Computer Science, and the programming I did, with my
+            interest in voice controlled programs such as Amazon Alexa, Apple's Siri, and Google
+            Translate inspired me to pick Linguistics and Computer Science.
+        </p>
+        <img id ="ftdn" src = "Images/Photo Mar 11, 8 11 09 PM.jpg"
+        alt = "Foundations Winter \'19 Showcase">
+        <p>I also joined a dance team for fun called 
+         Foundations; here's our post-showcase picture!</p>
 
-					<p>Jumpman Jumpman</p>
+         <h2>Leadership</h2>
+         <p>UCLA Alpha Kappa Psi, UCLA Association of Chinese Americans, UCLA Association for Computing Machines</p>
+    </section>
 
-					<br/>
+    <hr>
 
-					<img id = "jump" src="https://www.dropbox.com/s/1he29yezz8w2zzy/IMG_7694.jpg?raw=1"alt="jumpy" height="42" width="42"/>
+    <section id="dark-mode-section">
+        <p>Hello world</p>
+        <button onclick = "toggleDarkMode()">Switch to dark mode</button>  <!--calls darkModefunction 
+        Quotes is syntax, the braces <> execute it-->
+    </section>
 
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					
 
-					<a href="http://www.google.com">Need help?</a>
 
-			</div>
+    <footer> <!--try to put an actual link later-->
+        <p>Contact me at <span class="highlight">xiongbrendan@gmail.com<span></span></p>
+        <p>Find me on <a href="https://linkedIn.com">LinkedIn</a></p>
+        <!-- span new kind on inline tag(?) like inline div (no line break) -->
+    </footer>
 
-	</body>
-
+    </body>
 </html>

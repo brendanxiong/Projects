@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SWE Workshop</title>
+ 
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/javascript" src="./mockHistory.js"></script>
+  </head>
+ 
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+    
+        //create app element
+        const App = () => {
+            //can use mockHistory element here - this is a function
+            const stuffToReturn = []
+            for (let i = 0; i < mockHistory.length; i += 1){
+                const historyEvent = mockHistory[i] //writing javascript but looks html - html and java mix
+                console.log('Hello world')
+                //create eventDiv h1, p, and that stuff into div
+                //then loop through details; can type java in script tag
+                //{}- things inside here are actual javascript EX: they grab function
+                const eventDiv = (
+                    <div>
+                        <h1>{historyEvent.title}</h1>   
+                        <p>{historyEvent.details}</p>
+                    </div>
+                )
+
+                stuffToReturn.push(eventDiv)        //puhs into array
+            }
+
+            return stuffToReturn;   //function returns array of eventDivs
+        }
+
+      ReactDOM.render(<App />, document.getElementById('root'))
+      //In html file find the element with id root and render app component in it
+    </script>
+  </body>
+</html>
+
+
+
+<!--see github for composition function (building blocks within building blocks-->
+
+
+
+
+
+<!--OLD DOCUMENT WITH ARRAY TRAVERSAL
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8"/>
+        <title>SWE Workshiop </title>
+
+       <script type = "text/javascript" src="./mock.rockets.js"></script>
+       <script type = "text/javascript" src="./mockHistory.js"></script>   any line below this can access mock history, make sure mockHistory spelled the same
+    </head>
+
+    <body>
+        <div><h1>Hello World</h1></div>
+        <div id = "history-wrapper"></div>
+        root of everything rendered on page
+        <div id = "root"></div>
+        <script type = "text/javascript" src = "./index_react.js"></script> index.js is after everything because everything renders top down, need history wrapper to render first(>)
+        this imports files
+    </body>
+
+
+    how to show history items in html instead of pasting it in another div (not scalable); we use id numbers (?)
+</html>
+-->
